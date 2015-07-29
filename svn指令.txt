@@ -1,0 +1,6 @@
+svn常用指令
+svn co path 从对应的分支拉HEAD快照到本地
+svn add file 将文件加入到版本库
+svn delete file 将文件移除版本库
+svn ci -m将本地文件提交为快照
+svn status 查看状态
