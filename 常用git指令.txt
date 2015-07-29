@@ -25,3 +25,4 @@
 19.git merge branch1 将两个分支的HEAD进行合并成为一个新的commit，将其设为HEAD，然后其他的commit按照时间先后排序
 20.git rebase branch1
 将branch1插入到另外一个分支中
+21.git checkout —-track  origin/hello 从本地库的远程部分拉刀对应的本地分支，同时自动切换到这个分支
