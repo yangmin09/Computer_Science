@@ -1,0 +1,27 @@
+常用的git指令总结
+1.git diff 查看工作目录和HEAD的区别(添加commit是比较与对应commit的区别)
+2.git diff --cached 查看暂存区和HEAD的区别(添加commit是比较与对应commit的区别)
+3.git commit1 commit2 比较两个commit之间的区别
+4.git rm file 将文件从工作目录和暂存区移除
+5.git rm file --cached将文件移除暂存区
+6.切换分支的时候会导致工作目录和暂存区都变更为对应分支HEAD commit
+7.git stash 将工作目录缓存到栈区
+8.git stash list 显示所有的缓存
+9.git stash apply 使用指定的缓存覆盖当前的工作区间
+10.git stash clear 清除栈区
+11.git stash pop 使用栈顶的缓存覆盖当前的工作区间
+12.git reset --hard/soft/mixed HEAD/commit
+将HEAD指向对应的快照，并且将其之前的commit全部删除 hard是将工作区和暂存区全部更换为HEAD，soft是将工作区和暂存区都不变，mixed则是暂存区变但是工作区不变
+13.git revert HEAD/commit
+再次提交一个快照，快照为对应的commit，HEAD指向这个commit，工作区间和暂存区都覆盖为HEAD
+14.git add .
+将所有的文件改变和增加提交到暂存区
+15.git add --all
+将所有文件改变，增加和删除都提交到缓存区
+16.git commit -a
+将所有的文件改变提交到暂存区 然后提交
+17.git log 显示所有的提交记录
+18.git tag tagname commit 将指定commit设置tag
+19.git merge branch1 将两个分支的HEAD进行合并成为一个新的commit，将其设为HEAD，然后其他的commit按照时间先后排序
+20.git rebase branch1
+将branch1插入到另外一个分支中
