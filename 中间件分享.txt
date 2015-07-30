@@ -1,0 +1,35 @@
+ configserver
+ configserver(内存数据库)和search engine类似 实现顺排转倒排(ip-服务集合-->服务-ip集合)
+ configserver实际上也实现了逻辑上的隔离(线上环境和预发环境物理相连逻辑隔离)
+ config 异步推送
+ 服务提供者与configserver之间是长连接
+
+
+ 序列化+transient
+
+ netty
+
+ callback和future的区别
+ 使用哪种数据结构取决于当前业务的需要
+
+ hbase为树结构，适合范围查询
+ hbase适合存日志 适合于写
+
+ tddl
+ 异步主从库
+ 横向切分，纵向切分
+ 分库分表(数据太多，与此同时也可以优化查询效率(主要驱动力))
+ 三层数据源
+ matrix 分库分表路由(分库分表字段)
+ group 读写分离(master负责写更新，slave负责查询)
+ atom 动态数据源（ip地址变更自动连接）
+ 分库分表处理事务：
+ 非强一致：转账例子 a扣钱，b加钱 只需要给a加事务，然后发异步消息给b即可
+ 
+ dimond
+ 持久化处理中心
+ 
+ notify
+ 重复 有序 消息事务 消息堆积 作用:解耦，异步，分布式 概念：topic&messagetype  groupid
+ 可靠：使命必达：第一次投递实时，但是后续的投递视消息堆积情况决定
+ 
